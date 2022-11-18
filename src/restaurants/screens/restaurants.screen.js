@@ -8,6 +8,7 @@ import { Spacer } from "../../components/spacer/spacer.componet";
 import { SafeArea } from "../../components/utility/safe-area.component";
 import { RestaurantsContext } from "../../services/restaurants/restaurants.context";
 import { Search } from "../components/search.component";
+import { FavouritesContext } from "../../services/favourites/favourite.context";
 
 const RestaurentList = styled(FlatList).attrs({
   contentContainerStyle: {
@@ -27,6 +28,8 @@ left:50%
 
 export const ResturantsScreen = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
+  const { favourites } = useContext(FavouritesContext);
+  console.log(favourites);
 
   return (
     <SafeArea>
