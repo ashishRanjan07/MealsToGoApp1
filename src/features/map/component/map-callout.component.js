@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 
-const MyText = styled.Text``;
+import { CompactRestaurantInfo } from "../../../components/restaurant/Compact-restaurant-info.component";
 
 export const MapCallout = ({ restaurant }) => (
-  <MyText>{restaurant.name}</MyText>
+  <CompactRestaurantInfo restaurant={restaurant} />
 );
